@@ -54,7 +54,7 @@ public:
         screen_height = 500;
         InitWindow(screen_width, screen_height, "Single Dimension DP Visualizer");
         SetTargetFPS(60); 
-        Arial = LoadFontEx("C:\\Windows\\Fonts\\arial.ttf", 64, NULL, 0);
+        Arial = {}; //LoadFontEx(RESOURCE_PATH "Arial.ttf", 64, NULL, 0);
         initialized = true;
     }
     void update(const std::vector<int>& dp, std::vector<int>& prev, std::vector<int>& cur) {
@@ -127,7 +127,7 @@ public:
         screen_height = 200 + (range_length.i * (box_size + box_dist));
         InitWindow(screen_width, screen_height, "Double Dimension DP Visualizer");
         SetTargetFPS(60); 
-        Arial = LoadFontEx("C:\\Windows\\Fonts\\arial.ttf", 64, NULL, 0);
+        Arial = {};//LoadFontEx("./arial.ttf", 64, NULL, 0);
         initialized = true;
     }
     void update2D(const std::vector<std::vector<int>>& dp, std::vector<std::pair<int, int>>& prev, std::vector<std::pair<int, int>>& cur) {
