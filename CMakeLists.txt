@@ -13,3 +13,13 @@ target_link_libraries(VisualizerTest2D Visualizer)
 
 add_executable(VisualizerTest1D DP_1D_test.cpp)
 target_link_libraries(VisualizerTest1D Visualizer)
+
+install(TARGETS Visualizer
+    EXPORT Visualizer
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+)
+
+install(FILES Visualizer.h
+    DESTINATION include)
